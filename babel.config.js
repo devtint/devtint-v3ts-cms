@@ -5,7 +5,10 @@ module.exports = {
       {
         libraryName: 'element-plus',
         customStyleName: (name) => {
-          return `element-plus/lib/theme-chalk/${name}.css`
+          // return `element-plus/dist/${name}.css`
+          // css路径
+          name = name.slice(3)
+          return `element-plus/lib/components/${name}/style/css`
         }
       }
     ]

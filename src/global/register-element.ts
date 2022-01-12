@@ -1,5 +1,6 @@
 import { App } from 'vue'
 import 'element-plus/dist/index.css' // 引入element-plus样式
+// import 'element-plus/lib/theme-chalk/base.css' // 引入element-plus样式
 
 import {
   ElButton,
@@ -10,7 +11,7 @@ import {
   ElAvatar,
   ElBacktop,
   ElBadge
-} from 'element-plus'
+} from 'element-plus/lib/components'
 
 const components = [
   ElButton,
