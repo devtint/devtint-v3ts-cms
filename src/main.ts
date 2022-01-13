@@ -12,7 +12,20 @@ app.use(store)
 app.use(router)
 app.mount('#app')
 
-wlRequest.request({
-  url: '/home/multidata',
-  method: 'get'
-})
+interface DataType {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any
+  returnCode: string
+  success: boolean
+}
+
+wlRequest
+  .get<DataType>({
+    url: '/home/multidata',
+    showLoading: false
+  })
+  .then((res) => {
+    console.log(res.data)
+    console.log(res.returnCode)
+    console.log(res.success)
+  })
