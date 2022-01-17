@@ -4,6 +4,8 @@ import wlRequest from '@/service'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import 'normalize.css'
+import './assets/css/index.less'
 // import '@/service/axios.demo' // 全局注册 axios
 
 const app = createApp(App)

@@ -10,8 +10,13 @@ import {
   ElAutocomplete,
   ElAvatar,
   ElBacktop,
-  ElBadge
+  ElBadge,
+  ElTabs,
+  ElTabPane,
+  ElIcon
 } from 'element-plus/lib/components'
+
+import { Avatar, Iphone, PhoneFilled } from '@element-plus/icons' // svg图标
 
 const components = [
   ElButton,
@@ -21,11 +26,20 @@ const components = [
   ElAutocomplete,
   ElAvatar,
   ElBacktop,
-  ElBadge
+  ElBadge,
+  ElTabs,
+  ElTabPane,
+  ElIcon
 ]
+
+const icons = [Avatar, PhoneFilled, Iphone]
+
 export default function (app: App): void {
   components.forEach((component) => {
     app.component(component.name, component)
+  })
+  icons.forEach((icon) => {
+    app.component(icon.name, icon)
   })
 }
 // for (const cpn of components) {
